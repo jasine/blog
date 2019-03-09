@@ -72,6 +72,8 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+Plugins:
+  hexo-generator-cname
 ## Themes: https://hexo.io/themes/
 theme: next
 
@@ -79,5 +81,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:jasine/jasine.github.io.git
-  branch: master
+  repository: git@github.com:jasine/blog.git
+  branch: gh-pages
