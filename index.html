@@ -305,6 +305,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jasine.me/2019/03/23/mac-route/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jasine Chen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/bg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jasine的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/23/mac-route/" class="post-title-link" itemprop="url">mac添加静态路由</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta" aria-hidden="true">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-23 22:34:01 / 修改时间：22:45:35" itemprop="dateCreated datePublished" datetime="2019-03-23T22:34:01+08:00">2019-03-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>路由查询： <code>netstat -rn</code>，通过该命令可以查看系统的路由表</p>
+<p>永久添加静态路由: <code>networksetup -setadditionalroutes &quot;Wi-Fi&quot; 192.168.2.14 255.255.255.0 10.100.0.9</code> 参数分别是网络服务名；目标网络；目标网络子网掩码；网关IP， 网络服务名可以通过<code>networksetup -listallnetworkservices</code>查询</p>
+<p>但是以上方式貌似没法设置网络接口，比如要将路由设置到<code>VPN</code>的网络接口时就没法用了，这种情况下可以使用<code>sudo route add -host 192.168.2.14 -interface utun3</code> 命令，而这种方法的缺点是重启丢失</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://jasine.me/2019/03/20/nginx-hsts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -640,7 +785,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
