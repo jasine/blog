@@ -305,6 +305,162 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://jasine.me/2019/04/20/flink/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jasine Chen">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/bg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jasine的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/20/flink/" class="post-title-link" itemprop="url">Flink拾遗</a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta" aria-hidden="true">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-20 16:52:31 / 修改时间：19:10:03" itemprop="dateCreated datePublished" datetime="2019-04-20T16:52:31+08:00">2019-04-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="unin-join-connect"><a href="#unin-join-connect" class="headerlink" title="unin,join,connect"></a>unin,join,connect</h2><ul>
+<li><code>unin</code>将同类型的流合并到一起，类似于汇聚</li>
+<li><code>join</code> 按照某种规则从两个流选择一部分数据</li>
+<li><code>connect</code> 将两个流(<code>DataStream</code>)连接到一起，此时生成的流(<code>ConnectedStream</code>)具备两个类型，可以应用算子处理，算子内部可以共享一部分数据结构与状态</li>
+</ul>
+<h2 id="物理分组"><a href="#物理分组" class="headerlink" title="物理分组"></a>物理分组</h2><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1g297nstgx0j30oq096ta3.jpg" alt></p>
+<ul>
+<li>如果上下游并行度一致，默认是<code>forward</code></li>
+</ul>
+<h2 id="API原理"><a href="#API原理" class="headerlink" title="API原理"></a>API原理</h2><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1g29adk6rypj310x0hotbl.jpg" alt></p>
+<h2 id="客户端操作"><a href="#客户端操作" class="headerlink" title="客户端操作"></a>客户端操作</h2><ul>
+<li><code>cancle</code>命令不优雅停止，<code>stop</code>命令优雅停止，在配置了<code>savepoint</code>路径后会生成savepoint</li>
+<li><code>modify -p [int]</code>动态调整并行度，会在调整的时候生成<code>savepoint</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://jasine.me/2019/03/23/mac-route/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -785,7 +941,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
